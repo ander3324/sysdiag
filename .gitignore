@@ -1,0 +1,23 @@
+# Build artifacts
+*.o
+*.out
+*.exe
+*.a
+*.so
+sysdiag
+
+# Editor/IDE files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# VS Code settings
+.vscode/
+
+# Python environments (if used)
+__pycache__/
+*.pyc
+.env/
+venv/
