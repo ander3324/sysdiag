@@ -1,1 +1,0 @@
-/usr/bin/cc -Wall -Wextra -Wpedantic -Wl,--dependency-file=CMakeFiles/sysdiag.dir/link.d CMakeFiles/sysdiag.dir/src/checks/checks.c.o CMakeFiles/sysdiag.dir/src/checks/memory.c.o CMakeFiles/sysdiag.dir/src/main.c.o -o sysdiag

@@ -1,9 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 #include "checks.h"
-#include "colors.h"
+#include "style.h"
 
-extern check_t checks[];
+// Checks declaration 
+// Each entry: { "Visible name", función_check } 
+check_t checks[] = { { "Available Memory", check_memory }, 
+    // Add more checks here: 
+    // { "CPU Usage", check_cpu }, 
+    // { "Disk Space", check_disk }, 
+    // { "Network Status", check_network }
+    { NULL, NULL } // Array ended 
+};
 
 void run_all_checks(void) {
     char msg[256];
@@ -14,12 +22,18 @@ void run_all_checks(void) {
         
         check_status st = checks[i].func(msg, sizeof(msg));
         
-        printf("[%s] %s\n", 
-            st == CHECK_OK ? ("OK") :
-            st == CHECK_WARN ? "WARN" : "FAIL", 
-            checks[i].name);
+        // First, print status...
+        print_status_label(st);
+        printf(" %s\n", checks[i].name);
 
-        if(msg[0] != '\0')
-            printf("%s", msg);  //already include line breaks
+        // Print each msg line
+        if(msg[0] != '\0') {
+            char *line = strtok(msg, "\n");
+            while(line) {
+                print_kv("", line); // empty key → perfect alignment
+                line = strtok(NULL, "\n");
+            }
+        }  
+        printf("\n");
     }
 }

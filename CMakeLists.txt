@@ -20,8 +20,9 @@ endif()
 
 set(CMAKE_C_FLAGS "-Wall -Wextra -Wpedantic")
 
-# Include headers
+# Include headers and utils
 include_directories(include)
+include_directories(utils)
 
 # Find all .c files within src/
 file(GLOB_RECURSE SOURCES "src/*.c")

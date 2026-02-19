@@ -1,7 +1,0 @@
-/home/ander/git/sysdiag/build/CMakeFiles/sysdiag.dir
-/home/ander/git/sysdiag/build/CMakeFiles/edit_cache.dir
-/home/ander/git/sysdiag/build/CMakeFiles/rebuild_cache.dir
-/home/ander/git/sysdiag/build/CMakeFiles/list_install_components.dir
-/home/ander/git/sysdiag/build/CMakeFiles/install.dir
-/home/ander/git/sysdiag/build/CMakeFiles/install/local.dir
-/home/ander/git/sysdiag/build/CMakeFiles/install/strip.dir

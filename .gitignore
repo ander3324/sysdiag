@@ -16,8 +16,22 @@ sysdiag
 # VS Code settings
 .vscode/
 
+# Build directory (CMake)
+build/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
 # Python environments (if used)
 __pycache__/
 *.pyc
 .env/
 venv/
+
+# Backup / temp files
+*.swp
+*.swo
+*~
