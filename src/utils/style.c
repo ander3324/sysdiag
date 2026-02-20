@@ -8,15 +8,15 @@ void print_status_label(check_status st) {
     switch (st) {
         case CHECK_OK:
             color = COLOR_GREEN;
-            label = "OK";
+            label = "✓ OK";
             break;
         case CHECK_WARN:
             color = COLOR_YELLOW;
-            label = "WARN";
+            label = "⚠ WARN";
             break;
         default:
             color = COLOR_RED;
-            label = "FAIL";
+            label = "✗ FAIL";
             break;
     }
 
@@ -24,9 +24,15 @@ void print_status_label(check_status st) {
 }
 
 void print_section_title(const char *title) {
-    printf("%s%s%s\n", COLOR_CYAN, title, COLOR_RESET);
+    printf("%s%s %s %s\n", COLOR_LIGHT_GREY, COLOR_BOLD, title, COLOR_RESET);
+    printf("--------------------------------------\n");
 }
 
-void print_kv(const char *key, const char *value) {
-    printf("%-20s %s\n", key, value);
+void print_key_val(const char *key, const char *value) {
+    if(key == NULL || key[0] == '\0') {
+        // No key, no double indent. Only a character space
+        printf(" %s\n", value);
+        return;
+    }
+    printf("%-16s %s\n", key, value);
 }

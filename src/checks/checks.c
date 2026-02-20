@@ -4,7 +4,7 @@
 #include "style.h"
 
 // Checks declaration 
-// Each entry: { "Visible name", función_check } 
+// Each entry: { "Visible name", function_check } 
 check_t checks[] = { { "Available Memory", check_memory }, 
     // Add more checks here: 
     // { "CPU Usage", check_cpu }, 
@@ -24,13 +24,13 @@ void run_all_checks(void) {
         
         // First, print status...
         print_status_label(st);
-        printf(" %s\n", checks[i].name);
+        print_section_title(checks[i].name);
 
         // Print each msg line
         if(msg[0] != '\0') {
             char *line = strtok(msg, "\n");
             while(line) {
-                print_kv("", line); // empty key → perfect alignment
+                print_key_val("", line); // empty key for a better alignment
                 line = strtok(NULL, "\n");
             }
         }  

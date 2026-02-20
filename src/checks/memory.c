@@ -43,7 +43,8 @@ check_status check_memory(char *msg, size_t msg_size) {
 
     // Return formatted text
     snprintf(msg, msg_size,
-        "%s\n%s\n",
+        "Total Memory:     %s\n"
+        "Available Memory: %s\n",
         total_str,
         avail_str
     );
