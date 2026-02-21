@@ -16,6 +16,7 @@ typedef struct {
 
 // All CHECKS declarations here 
 check_status check_memory(char *msg, size_t msg_size); 
+check_status check_cpu(char *msg, size_t msg_size);
 
 extern check_t checks[];
 

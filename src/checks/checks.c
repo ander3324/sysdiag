@@ -5,9 +5,9 @@
 
 // Checks declaration 
 // Each entry: { "Visible name", function_check } 
-check_t checks[] = { { "Available Memory", check_memory }, 
-    // Add more checks here: 
-    // { "CPU Usage", check_cpu }, 
+check_t checks[] = { 
+    { "Available Memory", check_memory }, 
+    { "CPU Status", check_cpu }, 
     // { "Disk Space", check_disk }, 
     // { "Network Status", check_network }
     { NULL, NULL } // Array ended 
