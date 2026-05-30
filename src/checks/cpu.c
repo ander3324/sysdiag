@@ -69,3 +69,4 @@ check_status check_cpu(char *msg, size_t msg_size) {
 
     return CHECK_OK;
 }
+

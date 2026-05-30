@@ -8,7 +8,7 @@
 check_t checks[] = { 
     { "Available Memory", check_memory }, 
     { "CPU Status", check_cpu }, 
-    // { "Disk Space", check_disk }, 
+    { "Disk Space", check_disk }, 
     // { "Network Status", check_network }
     { NULL, NULL } // Array ended 
 };
@@ -37,3 +37,4 @@ void run_all_checks(void) {
         printf("\n");
     }
 }
+
